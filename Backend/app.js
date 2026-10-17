@@ -9,7 +9,9 @@ app.use(cors(
 app.use(express.json());
 app.use('/api', analyseRoute);
 
-
+app.get('/', (req, res) => {
+    res.send('Welcome to ClauseWise API');
+});
 
 
 export default app;
