@@ -1,6 +1,3 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
 import express from 'express';
 import analyseRoute from './routes/analyse.route.js';
 import cors from 'cors'
