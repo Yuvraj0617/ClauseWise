@@ -33,7 +33,7 @@ function DocumentUploader({ status, error: requestError, onAnalyse }) {
   };
   return (
     <form
-      className="mt-9 rounded-xl border border-[#e5dacd] bg-paper p-3 shadow-[0_10px_32px_rgb(89_61_42_/_5%)]"
+      className="mt-8 rounded-md border border-line bg-paper p-6"
       onSubmit={handleSubmit}
     >
       <input
@@ -45,25 +45,25 @@ function DocumentUploader({ status, error: requestError, onAnalyse }) {
         hidden
       />
       <button
-        className="grid min-h-36 w-full place-items-center gap-1.5 rounded-md border border-dashed border-[#dcb8a7] bg-[#fdf9f2] p-5 font-sans text-sm font-bold text-[#68574d] hover:bg-[#fff5eb]"
+        className="flex w-full flex-col items-center gap-2 rounded-md border border-dashed border-line bg-canvas px-6 py-10 font-sans text-sm font-semibold text-slate transition-colors hover:border-accent hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
         type="button"
         onClick={() => inputRef.current?.click()}
       >
         <span
-          className="grid size-8 place-items-center rounded-full bg-clay text-xl text-white"
+          className="grid size-10 place-items-center rounded-full bg-accent text-base text-white"
           aria-hidden="true"
         >
-          ↑
+          &uarr;
         </span>
         <span>{file ? file.name : "Choose a contract PDF"}</span>
-        <small className="font-normal text-[#9b8b7e]">
+        <span className="font-normal text-fog">
           {file
             ? `${(file.size / 1024 / 1024).toFixed(2)} MB selected`
-            : "PDF only · up to 5 MB"}
-        </small>
+            : "PDF only &middot; up to 5 MB"}
+        </span>
       </button>
       <button
-        className="mt-3 w-full rounded-md bg-clay px-4 py-3 font-sans text-xs font-extrabold text-white hover:bg-[#b8573c] disabled:cursor-wait disabled:opacity-65"
+        className="mt-4 w-full rounded-md bg-accent px-5 py-3 font-sans text-sm font-semibold text-white transition-colors hover:bg-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-65"
         type="submit"
         disabled={status === "loading"}
       >
@@ -71,7 +71,7 @@ function DocumentUploader({ status, error: requestError, onAnalyse }) {
       </button>
       {error && (
         <p
-          className="mt-2 text-left font-sans text-xs text-red-700"
+          className="mt-3 text-left font-sans text-sm text-alert"
           role="alert"
         >
           {error}

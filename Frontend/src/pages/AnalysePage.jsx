@@ -25,25 +25,28 @@ function AnalysePage() {
   }
 
   return (
-    <main className="mx-auto w-[min(100%-2rem,1180px)] pb-14">
+    <div className="min-h-screen bg-canvas">
       <SiteHeader workspace />
 
-      <section className="mx-auto my-16 max-w-180 text-center sm:my-24" aria-labelledby="page-title">
-        <p className="mb-2 font-sans text-[11px] font-extrabold uppercase tracking-[.12em] text-[#c76443]">
-          AI contract review
-        </p>
-        <h1 id="page-title" className="text-4xl leading-none tracking-[-.05em] text-[#382820] sm:text-6xl">
-          Understand the important parts of your agreement.
-        </h1>
-        <p className="mx-auto mt-5 max-w-150 font-sans text-base leading-7 text-[#806f64]">
-          Upload a PDF to extract its parties, key clauses, dates, risks, and practical next steps.
-        </p>
-        <DocumentUploader status={status} error={error} onAnalyse={handleAnalyse} />
-      </section>
+      <main className="mx-auto max-w-6xl px-6 pb-16">
+        <section className="py-12 sm:py-16" aria-labelledby="page-title">
+          <p className="mb-2 font-sans text-sm font-medium text-accent">
+            AI contract review
+          </p>
+          <h1 id="page-title" className="font-serif text-3xl leading-tight tracking-tight text-ink sm:text-4xl">
+            Understand the important parts of your agreement.
+          </h1>
+          <p className="mt-3 max-w-xl font-sans text-base leading-7 text-fog">
+            Upload a PDF to extract its parties, key clauses, dates, risks, and practical next steps.
+          </p>
+          <DocumentUploader status={status} error={error} onAnalyse={handleAnalyse} />
+        </section>
 
-      {analysis && <AnalysisResults analysis={analysis} />}
+        {analysis && <AnalysisResults analysis={analysis} />}
+      </main>
+
       <SiteFooter />
-    </main>
+    </div>
   )
 }
 

@@ -1,1 +1,1 @@
-export const PRIMARY_ACTION_CLASS = 'inline-flex items-center gap-6 rounded bg-clay px-4 py-3.5 font-sans text-xs font-extrabold text-white transition hover:bg-[#b8573c]'
+export const PRIMARY_ACTION_CLASS = 'inline-flex items-center gap-6 rounded-md bg-accent px-5 py-3 font-sans text-sm font-semibold text-white transition-colors hover:bg-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2'

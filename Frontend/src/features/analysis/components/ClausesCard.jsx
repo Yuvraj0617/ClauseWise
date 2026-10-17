@@ -5,13 +5,13 @@ function ClausesCard({ clauses }) {
 
   return (
     <ResultCard title="Clause Deep-Dive">
-      <div className="divide-y divide-[#eee5da]">
+      <div className="divide-y divide-line">
         {clauses.map((clause, index) => (
-          <article className="grid gap-1 py-4 first:pt-0 sm:grid-cols-[78px_1fr] sm:gap-4" key={index}>
-            <span className="font-sans text-[10px] font-extrabold uppercase text-[#b95b40]">Section {index + 1}</span>
+          <article className="grid gap-2 py-4 first:pt-0 sm:grid-cols-[80px_1fr] sm:gap-4" key={index}>
+            <span className="font-sans text-xs font-semibold uppercase tracking-wider text-accent">Section {index + 1}</span>
             <div>
-              <h3 className="text-sm text-[#49362d]">{clause.title}</h3>
-              <p className="mt-1 font-sans text-xs leading-5 text-[#725f54]">{clause.text}</p>
+              <h3 className="text-sm font-semibold text-ink">{clause.title}</h3>
+              <p className="mt-1 font-sans text-sm leading-5 text-slate">{clause.text}</p>
             </div>
           </article>
         ))}

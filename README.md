@@ -26,16 +26,24 @@ ClauseWise is an AI-assisted contract review application. Upload a PDF agreement
 
 ```text
 ClauseWise/
-|- Frontend/                 # React and Vite web application
-|  |- src/pages/             # Home and analysis pages
-|  |- src/components/        # Shared UI and upload components
-|  |- src/features/          # Home and analysis feature UI
-|  `- src/services/api.js    # API client
-`- Backend/                  # Express API
-   |- routes/                # API routes
-   |- controllers/           # Request handling
-   |- middleware/            # Upload validation
-   `- services/              # PDF cleanup and Gemini integration
+|- Frontend/                        # React and Vite web application
+|  |- src/components/               # Shared UI and upload components
+|  |- src/features/                 # Home and analysis feature UI
+|  |- src/pages/                    # Home and analysis pages
+|  |- src/services/                 # API client
+|  |- src/assets/                   # Static assets
+|  |- src/App.jsx                   # Router setup
+|  |- src/main.jsx                  # Entry point
+|  |- src/index.css                 # Tailwind and design tokens
+|  |- index.html                    # HTML shell
+|  |- vite.config.js                # Vite configuration
+|  `- package.json
+`- Backend/                         # Express API
+   |- routes/                       # API routes
+   |- controllers/                  # Request handling
+   |- middleware/                   # Upload validation
+   |- services/                     # PDF cleanup and Gemini integration
+   `- server.js                     # Entry point
 ```
 
 ## Prerequisites

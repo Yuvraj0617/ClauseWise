@@ -1,14 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #3e2f28;
-  --color-paper: #fffdfa;
-  --color-canvas: #f8f4ec;
-  --color-clay: #cc6647;
-  --color-muted: #806f64;
+  --color-ink: #1a1a1a;
+  --color-slate: #4a4a4a;
+  --color-fog: #8a8a8a;
+  --color-paper: #ffffff;
+  --color-canvas: #f7f6f4;
+  --color-line: #e5e3e0;
+  --color-accent: #2d5f4a;
+  --color-accent-dark: #1f4a38;
+  --color-accent-soft: #eef4f1;
+  --color-gold: #9a7b4f;
+  --color-alert: #b4453a;
+  --color-alert-soft: #faf0ee;
+
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 @layer base {
-  body { @apply min-w-80 bg-canvas text-ink antialiased; }
-  button, input { font: inherit; }
+  body {
+    @apply min-w-80 bg-canvas text-ink font-sans antialiased;
+  }
+  button, input {
+    font: inherit;
+  }
 }

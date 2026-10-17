@@ -5,7 +5,7 @@ function SummaryCard({ summary }) {
 
   return (
     <ResultCard title="Executive Summary">
-      <div className="space-y-2 font-sans text-sm leading-6 text-[#725f54]">
+      <div className="space-y-3 font-sans text-sm leading-6 text-slate">
         {summary.map((item, index) => <p key={index}>{item}</p>)}
       </div>
     </ResultCard>

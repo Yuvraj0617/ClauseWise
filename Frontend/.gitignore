@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 architecture.md
+.agent
+skills-lock.json
 
 # Editor directories and files
 .vscode/*
